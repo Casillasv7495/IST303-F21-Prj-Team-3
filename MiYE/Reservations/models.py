@@ -1,5 +1,7 @@
 from django.db import models
 
+from Reservations import service
+
 # ALWAYS run "python manage.py makemigrations" and "python manage.py migrate"
 # Create your models here.
 class Reservations(models.Model):
@@ -13,3 +15,4 @@ class Reservations(models.Model):
 
     def __str__(self):
         return self.guest
+

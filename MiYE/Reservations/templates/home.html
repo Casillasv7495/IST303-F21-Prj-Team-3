@@ -1,8 +1,10 @@
 <html>
-    <head>
-        <title>Welcome to MiYE</title>
-    </head>
-    
+    <h1>
+    Welcome to MiYE
+    </h1>
+
+    <h1>Hello {{ name }}</h1>
+
     <body>
         {% for i in db %}
         <p>{{i.guest}}</p>
@@ -12,5 +14,8 @@
         <p>{{i.t_service}}</p>
         <p>{{i.room}}</p>
         <p>{{i.city}}</p>
+        {% endfor %}
     </body>
 </html>
+
+
