@@ -9,6 +9,8 @@ from .models import Address
 from .models import Cart
 from .models import CartItem
 
+
+
 # Register your models here.
 admin.site.register(Reservations)
 admin.site.register(Customer)

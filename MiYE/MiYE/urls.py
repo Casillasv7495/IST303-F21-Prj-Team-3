@@ -9,6 +9,8 @@ from django.contrib.auth.views import LoginView, LogoutView
 from app import forms, views
 from django.urls import path, include
 
+admin.site.site_header = 'MiYE Admin'
+admin.site.index_title = 'MiYE Admin'
 
 urlpatterns = [
     path('', views.home, name='home'),
