@@ -1,3 +1,4 @@
+import uuid
 from django.db import models
 
 
@@ -16,7 +17,7 @@ class Reservations(models.Model):
         (SERVICES_FACIALS, 'facials'),
         (SERVICES_SPECIALTYTREATMENTS, 'specialty treatments'),
     ]
-    ID = models.CharField(max_length=10, primary_key=True, default= '+')
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     first_name = models.CharField(max_length=255, null=True)
     last_name = models.CharField(max_length=255, null=True)
     service=models.CharField(max_length=4, choices=SERVICES, default=SERVICES_MINERALBATHS)
