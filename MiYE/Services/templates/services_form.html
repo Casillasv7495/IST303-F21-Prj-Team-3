@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h2>Services Form</h2>
+
+  <form method="post" id="ServicesForm" data-options-url="{% url 'ajax_load_options' %}" novalidate>
+    {% csrf_token %}
+    <table>
+      
+      {{ form.as_table }}
+    </table>
+    <button type="submit">Save</button>
+    <a href="{% url 'services_changelist' %}">Nevermind</a>
+  </form>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script>
+    $("#id_college").change(function () {
+      var url = $("#servicesForm").attr("data-options-url");  
+      var typeId = $(this).val();  
+
+      $.ajax({                      
+        url: url,                    
+        data: {
+          'type': typeId       
+        },
+        success: function (data) {  
+          $("#id_options").html(data);  
+        }
+      });
+
+    });
+  </script>
+
+
+{% endblock %}

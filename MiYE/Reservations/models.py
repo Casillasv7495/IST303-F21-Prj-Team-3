@@ -69,7 +69,7 @@ class Order (models.Model):
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.PROTECT)
     reservations = models.ForeignKey(Reservations, on_delete=models.PROTECT)
-    quantity = models.PositiveBigIntegerField()
+    quantity = models.PositiveIntegerField()
     unit_price = models.DecimalField(max_digits=6, decimal_places=2)
 
     def __str__(self) -> str:
