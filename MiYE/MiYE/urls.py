@@ -7,7 +7,10 @@ from django.urls import path
 from django.contrib import admin
 from django.contrib.auth.views import LoginView, LogoutView
 from app import forms, views
+from django.urls import path, include
 
+admin.site.site_header = 'MiYE Admin'
+admin.site.index_title = 'MiYE Admin'
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -27,4 +30,5 @@ urlpatterns = [
          name='login'),
     path('logout/', LogoutView.as_view(next_page='/'), name='logout'),
     path('admin/', admin.site.urls),
+    path('Reservations/', include('Reservations.urls'))
 ]

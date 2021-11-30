@@ -1,0 +1,49 @@
+# a=input("enter the items and costs ( diffrent item to be seperated by ',' ")
+
+# print("****** RECIEPT *****")
+# a=a.split(",")
+# for i in a:
+#     print(i)
+# print("******* Thank you *****")
+
+print("----------- RECIEPT -----------")
+print("\n")
+print("===============================")
+print("******* Mud in Your Eye *******")
+print("===============================")
+print("\n")
+
+finished = False
+
+TAX_RATE = 0.70
+service_no = 0
+tax = 0.0
+subtotal = 0.0
+total = 0.0
+
+while (not finished):
+    prompt = "Enter amount for service #" + str(service_no + 1) + ": $"
+    price = float(input(prompt))
+    if  (price == 0):
+        finished = True
+    else:
+        subtotal += price
+        service_no += 1
+        print("\tprice entered: ${:.2f}".format(price))
+
+tax = subtotal * TAX_RATE
+# total = subtotal + tax
+total = subtotal 
+
+print("\n")
+print("===============================")
+print("Total Services Purchased: {:d}".format(service_no))
+print("===============================")
+# print("\n")
+# print("SUBTOTAL: ${:.2f}".format(subtotal))
+# print("TAX: ${:.2f}".format(tax))
+print("TOTAL: ${:.2f}".format(total))
+print("===============================")
+print("\n")
+print("******* COME BACK SOON! *******")
+print("\n")

@@ -1,9 +1,32 @@
 <html>
-    <head>
-        <title>Welcome to MiYE</title>
-    </head>
-    
+    <h1>
+    Welcome to MiYE
+    </h1>
+
+    <h1>Hello {{ name }}</h1>
+
     <body>
+
+        Welcome to “Mud in Your Eye” (MiYE)
+
+        Services
+        Serivces mineral baths:                                                                    60 / 90 min @$2.50/min
+        massages (Swedish, shiatsu, or deep tissue) :                                              30/ 60 min @ $3.00/mi.
+        facials (normal or collagen):                                                              30/ 60 min @ $2.00/min
+        specialty treatments (hot stone, sugar scrub, herbal body wrap, or botanical mud wrap) :   60/90 min @ $3.50/min.
+        Charges include: rooms, food, and other things besides services.
+        
+        Hours of Operation 
+        M-S  from 8 am to 8 pm *service ends at 8pm
+        
+        Reservation
+        Services can only be scheduled during the guest’s stay—no reservations for future stays are allowed.
+        
+        Cancelation Policy
+        10 minutes of making the reservation or at least 90 minutes before the reservation time
+        
+        Thank you!
+        
         {% for i in db %}
         <p>{{i.guest}}</p>
         <p>{{i.service}}</p>
@@ -12,5 +35,8 @@
         <p>{{i.t_service}}</p>
         <p>{{i.room}}</p>
         <p>{{i.city}}</p>
+        {% endfor %}
     </body>
 </html>
+
+
