@@ -5,7 +5,7 @@
 <div class="jumbotron">
     <h1>Welcome to “Mud in Your Eye” (MiYE)</h1>
     <p class="lead">a SPA that will making you open your eyes to new sights</p>
-    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    <p><a href="{% url 'about' %}" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
 </div>
 
 <div class="row">
@@ -16,14 +16,12 @@
         facials (normal or collagen):         <br>                                                      30/ 60 min @ $2.00/min <br> 
         specialty treatments (hot stone, sugar scrub, herbal body wrap, or botanical mud wrap) :  <br>  60/90 min @ $3.50/min. <br> 
         Charges include:<br>  rooms, food, and other things besides services.
-        <p><a class="btn btn-default" href="https://djangobook.com/django-tutorials/">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="{% url 'contact' %}">Book &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2> Hours of Operation </h2>
         <p> M-S  from 8 am to 8 pm *service ends at 8pm</p>
-
-
-        <p><a class="btn btn-default" href="https://pypi.org/">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="{% url 'contact' %}">Book &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>Reservation and Cancelation Policy</h2>
@@ -31,7 +29,7 @@
         Services can only be scheduled during the guest’s stay (no reservations for future stays are allowed.)</p>
         <p>Cancelation Policy <br> 
         10 minutes of making the reservation or at least 90 minutes before the reservation time</p>
-        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="{% url 'contact' %}">Book &raquo;</a></p>
     </div>
 </div>
 
