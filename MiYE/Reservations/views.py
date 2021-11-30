@@ -10,5 +10,7 @@ from django.http import HttpResponse
 
 def show(request):
     db=Reservations.objects.all()
-    return render(request, 'home.html', {'db':db, 'name':'guest'})
+    return render(request, 'home.html', {'db':db})
+
+
 
