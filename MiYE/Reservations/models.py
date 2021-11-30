@@ -6,27 +6,36 @@ from django.db import models
 # Create your models here.
 
 class Reservations(models.Model):
-    SERVICES_MINERALBATHS = 'MB'
-    SERVICES_MASSAGES = 'MA'
-    SERVICES_FACIALS = 'FA'
-    SERVICES_SPECIALTYTREATMENTS = 'ST'
+    SERVICES_SWEDISH = 'SW'
+    SERVICES_SHIATSU = 'SH'
+    SERVICES_DEEP_TISSUE = 'DT'
+    SERVICES_NORMAL = 'NO'
+    SERVICES_COLLAGEN ='CO'
+    SERVICES_HOT_STONE = 'HS'
+    SERVICES_SUGAR = 'SU'
+    SERVICES_SCRUB = 'SC'
+    SERVICES_HERBAL_BODY_WRAP = 'HB'
+    SERVICES_BONTANICAL_MUD_WRAP = 'BM'
 
     SERVICES = [
-        (SERVICES_MINERALBATHS, 'mineral baths'),
-        (SERVICES_MASSAGES, 'massages'),
-        (SERVICES_FACIALS, 'facials'),
-        (SERVICES_SPECIALTYTREATMENTS, 'specialty treatments'),
+        (SERVICES_SWEDISH, 'Swedish'),
+        (SERVICES_SHIATSU, 'Shiatsu'),
+        (SERVICES_DEEP_TISSUE, 'Deep Tissue'),
+        (SERVICES_NORMAL, 'Normal'),
+        (SERVICES_COLLAGEN,'Collagen'),
+        (SERVICES_HOT_STONE,'Hot Stone'),
+        (SERVICES_SUGAR, 'Sugar'),
+        (SERVICES_SCRUB, 'Scrub'),
+        (SERVICES_HERBAL_BODY_WRAP, 'Herbal Body Wrap'),
+        (SERVICES_BONTANICAL_MUD_WRAP, 'Bontanical Mud Wrap'),
     ]
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.CharField(max_length=255, primary_key=True, unique=True, editable=False)
     first_name = models.CharField(max_length=255, null=True)
     last_name = models.CharField(max_length=255, null=True)
-    service=models.CharField(max_length=4, choices=SERVICES, default=SERVICES_MINERALBATHS)
-    location=models.CharField(max_length=50, null=True)
-    timing=models.CharField(max_length=255, null=True)
-    room=models.CharField(max_length=255, null=True)
+    service=models.CharField(max_length=4, choices=SERVICES, default=SERVICES_NORMAL)
 
     def __str__(self) -> str:
-        return self.ID
+        return self.id
 
 class Customer (models.Model):
     MEMBERSHIP_BRONZE = 'B'
@@ -38,7 +47,7 @@ class Customer (models.Model):
         (MEMBERSHIP_SILVER, 'Silver'),
         (MEBMERSHIP_GOLD, 'Gold'),
     ]
-    ID = models.CharField(max_length=10, primary_key=True)
+    id = models.CharField(max_length=10, primary_key=True)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
@@ -47,7 +56,7 @@ class Customer (models.Model):
     membership = models.CharField(max_length=1, choices=MEMBERSHIP_CHOICES, default=MEMBERSHIP_BRONZE)
     
     def __str__(self) -> str:
-        return self.ID
+        return self.id
 
 
 class Order (models.Model):
@@ -84,19 +93,4 @@ class Address(models.Model):
     def __str__(self) -> str:
         return self.street
  
-
-class Cart(models.Model):
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self) -> str:
-        return self.created_at
-
-class CartItem(models.Model):
-    cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
-    reservations = models.ForeignKey(Reservations, on_delete=models.PROTECT)
-    quantity = models.PositiveSmallIntegerField()
-    
-    def __str__(self) -> str:
-        return self.cart
-
 
