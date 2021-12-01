@@ -31,5 +31,5 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(next_page='/'), name='logout'),
     path('admin/', admin.site.urls),
     path('Reservations/', include('Reservations.urls')),
-    path('Services/', include('Services.urls'))
+    path('Services/', include('Services.urls')),
 ]
