@@ -19,7 +19,7 @@ class ServicesUpdateView(UpdateView):
     form_class = ServicesForm  
     success_url = reverse_lazy('services_changelist')
 
-def load_options(request):
+def load_optiones(request):
     types_id = request.GET.get('types')
-    options = Options.objects.filter(types_id=types_id).order_by('name')
-    return render(request, 'MiYE/option_dropdown_list_options.html', {'options': options})
+    optiones = Options.objects.filter(types_id=types_id).order_by('name')
+    return render(request, 'Services/option_ddl.html', {'optiones': optiones})

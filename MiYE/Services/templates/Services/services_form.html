@@ -4,26 +4,26 @@
 
   <h2>Services Form</h2>
 
-  <form method="post" id="ServicesForm" data-options-url="{% url 'ajax_load_options' %}" novalidate>
+  <form method="post" id="ServicesForm" data-optiones-url="{% url 'ajax_load_optiones' %}" novalidate>
     {% csrf_token %}
     <table>
       
       {{ form.as_table }}
     </table>
     <button type="submit">Save</button>
-    <a href="{% url 'services_changelist' %}">Nevermind</a>
+    <a href="{% url 'services_changelist' %}">Cancel</a>
   </form>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 <script>
-    $("#id_college").change(function () {
-      var url = $("#servicesForm").attr("data-options-url");  
+    $("#id_types").change(function () {
+      var url = $("#ServicesForm").attr("data-optiones-url");  
       var typeId = $(this).val();  
 
       $.ajax({                      
         url: url,                    
         data: {
-          'type': typeId       
+          'types': typeId       
         },
         success: function (data) {  
           $("#id_options").html(data);  

@@ -83,7 +83,6 @@
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
     <Folder Include="MiYE\" />
-    <Folder Include="templates\" />
     <Folder Include="Reservations\" />
     <Folder Include="Reservations\migrations\" />
     <Folder Include="Reservations\migrations\__pycache__\" />
@@ -93,6 +92,7 @@
     <Folder Include="Services\migrations\" />
     <Folder Include="Services\migrations\__pycache__\" />
     <Folder Include="Services\templates\" />
+    <Folder Include="Services\templates\Services\" />
     <Folder Include="Services\__pycache__\" />
   </ItemGroup>
   <ItemGroup>
@@ -144,10 +144,10 @@
     <Content Include="Services\migrations\__pycache__\__init__.cpython-310.pyc" />
     <Content Include="Services\migrations\__pycache__\__init__.cpython-36.pyc" />
     <Content Include="Services\migrations\__pycache__\__init__.cpython-37.pyc" />
-    <Content Include="Services\templates\option_ddl.html" />
-    <Content Include="Services\templates\services_form.html" />
-    <Content Include="Services\templates\services_list.html" />
-    <Content Include="templates\base.html" />
+    <Content Include="app\templates\base.html" />
+    <Content Include="Services\templates\Services\option_ddl.html" />
+    <Content Include="Services\templates\Services\services_form.html" />
+    <Content Include="Services\templates\Services\services_list.html" />
     <Content Include="Services\__pycache__\admin.cpython-310.pyc" />
     <Content Include="Services\__pycache__\admin.cpython-36.pyc" />
     <Content Include="Services\__pycache__\admin.cpython-37.pyc" />

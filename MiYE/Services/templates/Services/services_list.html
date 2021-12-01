@@ -19,11 +19,11 @@
       </tr>
     </thead>
     <tbody>
-      {% for service in servicess %}
+      {% for service in services %}
         <tr>
-          <td><a href="{% url 'service_change' service.pk %}">{{ Services.types.name }}</a></td>
+          <td><a href="{% url 'services_change' service.pk %}">{{ Services.types.name }}</a></td>
           <td>{{ Services.options.name }}</td>
-          <td>{{ Services.prices }}</td>
+          <td>{{ Services.Prices }}</td>
         </tr>
       {% empty %}
         <tr>
