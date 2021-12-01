@@ -17,4 +17,17 @@
     <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
 </address>
 
+<br>
+
+  <h1>Fill up the form below</h1>
+  <br>
+  <div class="container">
+    <form method = "POST">
+     {{ form.as_p }}  
+     {% csrf_token %}
+    <input type="submit" class="btn btn-primary" value="Submit" />
+   </form>
+    </div>
+
+
 {% endblock %}

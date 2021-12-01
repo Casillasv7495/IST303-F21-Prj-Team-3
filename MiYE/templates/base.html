@@ -1,0 +1,29 @@
+{% load static %}
+<!doctype html>
+<meta charset="utf-8">
+    <title>{% block title %}Student Database{% endblock %}</title>
+    <style type="text/css">
+      .errorlist {
+        margin: 0;
+        padding: 0;
+      }
+      .errorlist li {
+        list-style: none;
+        font-size: 90%;
+        color: red;
+      }
+      .errorlist ~ input,
+      .errorlist ~ select {
+        border-color: red;
+      }
+    </style>
+  <head>
+    
+  </head>
+  <body>
+    <h1>Student Database</h1>
+    <hr>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

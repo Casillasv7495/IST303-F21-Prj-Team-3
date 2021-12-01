@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Human Resources Module{% endblock %}
+
+{% block content %}
+  <h2>Human Resources Module » People Management</h2>
+
+  <p>
+    <a href="{% url 'services_add' %}">Add Services</a>
+  </p>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Services</th>
+        <th>Types</th>
+        <th>Options</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for service in servicess %}
+        <tr>
+          <td><a href="{% url 'service_change' service.pk %}">{{ Services.types.name }}</a></td>
+          <td>{{ Services.options.name }}</td>
+          <td>{{ Services.prices }}</td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="4">Services not found. <a href="{% url 'services_add' %}">Add the service</a>.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

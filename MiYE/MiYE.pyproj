@@ -5,6 +5,7 @@
     <Name>MiYE</Name>
     <RootNamespace>MiYE</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -42,6 +43,34 @@
     <Compile Include="MiYE\settings.py" />
     <Compile Include="MiYE\urls.py" />
     <Compile Include="MiYE\wsgi.py" />
+    <Compile Include="Reservations\admin.py" />
+    <Compile Include="Reservations\apps.py" />
+    <Compile Include="Reservations\migrations\0001_initial.py" />
+    <Compile Include="Reservations\migrations\0002_auto_20211106_0836.py" />
+    <Compile Include="Reservations\migrations\0003_address_zip.py" />
+    <Compile Include="Reservations\migrations\0004_auto_20211111_1803.py" />
+    <Compile Include="Reservations\migrations\__init__.py" />
+    <Compile Include="Reservations\models.py" />
+    <Compile Include="Reservations\tests.py" />
+    <Compile Include="Reservations\urls.py" />
+    <Compile Include="Reservations\views.py" />
+    <Compile Include="Reservations\__init__.py" />
+    <Compile Include="Services\admin.py" />
+    <Compile Include="Services\apps.py" />
+    <Compile Include="Services\migrations\0001_initial.py" />
+    <Compile Include="Services\migrations\0002_services_like.py" />
+    <Compile Include="Services\migrations\0003_remove_services_like.py" />
+    <Compile Include="Services\migrations\__init__.py" />
+    <Compile Include="Services\models.py" />
+    <Compile Include="Services\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\tests.py" />
+    <Compile Include="Services\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\views.py" />
+    <Compile Include="Services\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
@@ -54,6 +83,17 @@
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
     <Folder Include="MiYE\" />
+    <Folder Include="templates\" />
+    <Folder Include="Reservations\" />
+    <Folder Include="Reservations\migrations\" />
+    <Folder Include="Reservations\migrations\__pycache__\" />
+    <Folder Include="Reservations\templates\" />
+    <Folder Include="Reservations\__pycache__\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\migrations\" />
+    <Folder Include="Services\migrations\__pycache__\" />
+    <Folder Include="Services\templates\" />
+    <Folder Include="Services\__pycache__\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
@@ -86,6 +126,39 @@
     <Content Include="app\templates\app\layout.html" />
     <Content Include="app\templates\app\login.html" />
     <Content Include="app\templates\app\loginpartial.html" />
+    <Content Include="Reservations\migrations\__pycache__\0001_initial.cpython-310.pyc" />
+    <Content Include="Reservations\migrations\__pycache__\__init__.cpython-310.pyc" />
+    <Content Include="Reservations\templates\home.html" />
+    <Content Include="Reservations\templates\Receipt.html" />
+    <Content Include="Reservations\templates\register.html" />
+    <Content Include="Reservations\__pycache__\admin.cpython-310.pyc" />
+    <Content Include="Reservations\__pycache__\apps.cpython-310.pyc" />
+    <Content Include="Reservations\__pycache__\models.cpython-310.pyc" />
+    <Content Include="Reservations\__pycache__\__init__.cpython-310.pyc" />
+    <Content Include="Services\migrations\__pycache__\0001_initial.cpython-310.pyc" />
+    <Content Include="Services\migrations\__pycache__\0001_initial.cpython-36.pyc" />
+    <Content Include="Services\migrations\__pycache__\0001_initial.cpython-37.pyc" />
+    <Content Include="Services\migrations\__pycache__\0002_services_like.cpython-310.pyc" />
+    <Content Include="Services\migrations\__pycache__\0002_services_like.cpython-36.pyc" />
+    <Content Include="Services\migrations\__pycache__\0002_services_like.cpython-37.pyc" />
+    <Content Include="Services\migrations\__pycache__\__init__.cpython-310.pyc" />
+    <Content Include="Services\migrations\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="Services\migrations\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="Services\templates\option_ddl.html" />
+    <Content Include="Services\templates\services_form.html" />
+    <Content Include="Services\templates\services_list.html" />
+    <Content Include="templates\base.html" />
+    <Content Include="Services\__pycache__\admin.cpython-310.pyc" />
+    <Content Include="Services\__pycache__\admin.cpython-36.pyc" />
+    <Content Include="Services\__pycache__\admin.cpython-37.pyc" />
+    <Content Include="Services\__pycache__\apps.cpython-310.pyc" />
+    <Content Include="Services\__pycache__\apps.cpython-36.pyc" />
+    <Content Include="Services\__pycache__\models.cpython-310.pyc" />
+    <Content Include="Services\__pycache__\models.cpython-36.pyc" />
+    <Content Include="Services\__pycache__\models.cpython-37.pyc" />
+    <Content Include="Services\__pycache__\__init__.cpython-310.pyc" />
+    <Content Include="Services\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="Services\__pycache__\__init__.cpython-37.pyc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.html">

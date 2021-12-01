@@ -102,7 +102,7 @@ class Migration(migrations.Migration):
             name='OrderItem',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('quantity', models.PositiveBigIntegerField()),
+                ('quantity', models.PositiveIntegerField()),
                 ('unit_price', models.DecimalField(decimal_places=2, max_digits=6)),
                 ('order', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='Reservations.order')),
                 ('reservations', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='Reservations.reservations')),
