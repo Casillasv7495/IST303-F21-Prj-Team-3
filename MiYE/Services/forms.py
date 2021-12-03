@@ -4,7 +4,7 @@ from .models import Services, Options
 class ServicesForm(forms.ModelForm):
     class Meta:
         model = Services
-        fields = ('types', 'options','duration','Description','Price')
+        fields = ('name','types', 'options','duration','people','Description','Price')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

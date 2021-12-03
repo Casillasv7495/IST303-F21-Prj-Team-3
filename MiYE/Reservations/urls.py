@@ -8,7 +8,7 @@ from .views import(
 #URLConf
 urlpatterns = [
     path('', views.show),
-    path('new/', views.ReservationCreateView.as_view()),
+    #path('new/', views.ReservationCreateView.as_view()),
     url(r'^create/$',customer_create)
     
 ]
